@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Form Controls */
+select,
+input[type="text"],
+input[type="number"] {
+  @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  @apply h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  @apply h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500;
+}
+
+/* Custom styles for date picker */
+.react-datepicker-wrapper {
+  @apply w-full;
+}
+
+.react-datepicker__input-container input {
+  @apply w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500;
+}
+
+.react-datepicker {
+  @apply border border-gray-200 rounded-lg shadow-sm;
+}
+
+.react-datepicker__header {
+  @apply bg-gray-50 border-b border-gray-200;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-primary-600 text-white hover:bg-primary-700;
+}
+
+.react-datepicker__day--keyboard-selected {
+  @apply bg-primary-100 text-primary-700;
+}
+
+.react-datepicker__day:hover {
+  @apply bg-gray-100;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply bg-white text-gray-700 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+}
+
+/* Typography */
+h1 {
+  @apply text-2xl font-semibold text-gray-900;
+}
+
+h2 {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+h3 {
+  @apply text-lg font-medium text-gray-900;
+}
+
+/* Info box */
+.info-box {
+  @apply bg-blue-50 rounded-md p-4;
+}
+
+.info-box ul {
+  @apply list-disc pl-5 text-sm text-blue-700 space-y-1;
+}
+
+/* Animation utilities */
+.animate-fade {
+  @apply transition duration-200 ease-in-out;
+}
+
+/* Interactive elements */
+.interactive-element {
+  @apply transition duration-200 ease-in-out hover:scale-105;
+}
